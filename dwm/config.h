@@ -74,8 +74,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *screenshot[] = { "scrot", "/home/brenovergilio/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
-static const char *screenshotcrop[] = { "scrot", "-s", "/home/brenovergilio/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
+static const char *screenshot[] = { "scrot", "-z", "/home/brenovergilio/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
+static const char *screenshotcrop[] = { "scrot", "-z", "-s", "/home/brenovergilio/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.jpg", NULL};
 static const char *volumedown[] = { "amixer", "set", "Master", "5%-", NULL };
 static const char *volumeup[] = { "amixer", "set", "Master", "5%+", NULL };
 
